@@ -8,7 +8,7 @@ sql_select_pair = """SELECT ts, best_bid, best_ask, last, low24, high24, base_vo
 sql_select_distinct = """SELECT DISTINCT exchange, symbol FROM markets;"""
 
 t_end = int(time.time())
-t_start = t_end - 86400
+t_start = t_end - 86400 # 24 hr reporting period
 
 db = sqlite3.connect('market.dat')
 cursor = db.cursor()
